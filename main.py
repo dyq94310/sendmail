@@ -22,7 +22,7 @@ def read_file(path):
         return f.read()
 
 
-load_dotenv()
+load_dotenv("./conf/.env")
 
 """
 .env file
