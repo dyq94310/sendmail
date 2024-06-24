@@ -162,4 +162,7 @@ cython_debug/
 #.idea/
 
 
-/data
+data/
+bin/
+lib64
+pyvenv.cfg
