@@ -24,15 +24,22 @@ def read_file(path):
 
 load_dotenv()
 
-
+"""
+.env file
+smtp_server message
+"""
 smtp_server = os.getenv("smtp_server")
 port = os.getenv("port")
 sender_email = os.getenv("sender_email")
 password = os.getenv("password") 
-
 to_email = os.getenv("to_mail")
 
 mail_msg_path = os.getenv("mail_msg_path")
+msg_value = "mail_msg.txt"
 
-msg_value = read_file(mail_msg_path)
+if not mail_msg_path:
+    msg_value = "without mail_msg_path file"
+else:
+    msg_value = read_file(mail_msg_path)
+
 send_mail(msg_value)
